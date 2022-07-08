@@ -1,0 +1,121 @@
+
+*{
+    box-sizing: border-box;
+}
+
+main {
+    margin-left: 15.1%;
+    margin-top: 80px;
+    padding-top: 15px;
+    position: relative;
+    height: calc(100vh - 80px);
+    background: rgb(245, 249, 253);
+}
+main section {
+    background: #fff;
+    box-shadow: 5px 5px 5px #eee;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+aside {
+    top:0px;
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    width: 15%;
+    display: inline-block;
+}
+
+.mydiv{
+    padding: 10px 20px 20px 20px;
+    height:10%;
+}
+form div div{
+display: flex;
+flex-direction: column;
+padding: 10px 10px;
+width: 33.33%;
+}
+input, select{
+    padding: 10px 10px;
+    background: rgb(245, 249, 253);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin: 1px;
+}
+
+.myform{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input{
+    border: 1px;
+    border-radius: 2px;
+    height: 100%;
+}
+.button{
+    margin: 15px;
+    }
+ button{
+width: 10%;
+padding: 10px;
+margin: 5px;
+border-radius: 10px;
+box-shadow:3px 3px 3px #eee ;
+    }
+   
+#create{
+    color: white;
+   background-color:  rgb(75, 164, 224);}
+.browse{
+    
+    width: 100%;
+    background: rgb(245, 249, 253);
+    justify-content: flex-end;
+    flex-direction: row;
+    border-radius: 2px;
+  }
+
+/* #eprof{
+    
+    width: 75px;
+} */
+nav{
+    margin-top: 29px;
+}
+.text{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+#logo{
+    background-color: white;
+    border-radius: 49%;
+    padding: 5px;
+    
+}
+#logodiv{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    color: white;
+    gap: 10px;
+    align-items: center;
+}
+nav{
+    background-color: rgb(75, 164, 224);
+    height: 50px;
+    border-top-left-radius:30px 50% ;
+    border-bottom-left-radius:30px 50% ;
+
+}
+a{
+    text-decoration: none;
+}

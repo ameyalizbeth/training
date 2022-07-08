@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <aside>
+        <div class="mydiv">
+            <a href="create.html">
+                <img alt="not available" src="kv_logo.png">
+
+            </a>
+
+
+        </div>
+        <nav>
+            <a href="create.html">
+                <div id="logodiv">
+                    <img alt="no logo" src="List.png" id="logo">
+                    Employee List
+
+                </div>
+
+            </a>
+            
+
+        </nav>
+        
+            
+        </nav> 
+    </aside>
+    <main>
+        <section>
+            <h1>Create Employee</h1>
+            <!-- <p id="demo"></p> -->
+        </section>
+        <section class="formsection">
+            <div class="mydiv">
+                <div >
+                    <form  method="get" id="form1">
+                        <div class="myform">
+                            <div>
+                                <label id="label1" for="ename" >Employee Name</label>
+                                <input type="text" id="ename" placeholder="Employee Name">
+                            </div>
+                
+                            <div>
+                                <label for="eid" id="label2" >Employee ID</label>
+                                <input type="te" id="eid" placeholder="Employee ID">
+                            </div>
+                            <div>
+                                <label for="eid" id="label3">Employee email</label>
+                                <input type="text" id="email" placeholder="Employee Email">
+                            </div>
+                
+                            <div>
+                                <label for="ejoin" id="label4">Joining Date</label>
+                                <input type="date" id="ejoin" placeholder="joining date">
+                            </div>
+                
+                            <div>
+                                <label for="erole" id="label5">Role</label>
+                                <select name="erole" id="erole">
+                                    <option value="role1">1</option>
+                                    <option value="role2">2</option>
+                                    <option value="role3">3</option>
+                                </select>
+                            </div>
+               
+                            <div>
+                                <label for="estatus" id="label6">Status</label>
+                                <select name="estatus" id="estatus">
+                                    <option value="status1">1</option>
+                                    <option value="status2">2</option>
+                                    <option value="status3">3</option>
+                                </select>
+                    
+                            </div>
+                            <div>
+                                <label for="eexp" id="label7">Experience</label>
+                                <input type="text" id="eexp" placeholder="Experience">
+                            </div>
+                            <div>
+                                <label for="eadd" id="label8">Address</label>
+                                <input type="text" id="eadd" placeholder="Address">
+                            </div>
+                
+                             <div>
+                                <label for="eprof" id="label9">Upload ID Proof</label>
+                               
+                                <input type="file" id="eprof" placeholder="Choose file">
+                               
+                             </div>
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="button">  
+                    <button type="submit" form="form1" id="create" value="Submit" >create</button> 
+                    <button type="submit" form="form1" value="Submit">cancel</button> 
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    document.getElementById("create").addEventListener('click',func);
+    function func(){
+        
+        element2 = document.getElementById('ename').value
+        
+        element4 = document.getElementById('eid').value
+       
+        element6 = document.getElementById('email').value
+        
+        element8 = document.getElementById('ejoin').value
+        
+        element10 = document.getElementById('erole').value
+        
+        element12 = document.getElementById('estatus').value;
+        
+        element14 = document.getElementById('eexp').value
+        
+        element16 = document.getElementById('eadd').value
+        
+        element18 = document.getElementById('eprof').value
+    if (/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/.test(element6))
+  {
+    let employee = {employeename:element2, employeeID:element4, email:element6, joiningdate:element8, role:element10, status:element12, experience:element14, address:element16, proof:element18};
+        console.log(employee)
+  }
+   else{alert("You have entered an invalid email address!")
+    return (false)
+   }
+       
+        
+    }
+    document.getElementById('form1').addEventListener('submit',nfun);
+    function nfun(e){
+        e.preventDefault();
+        document.getElementById('create').style.backgroundColor = 'gray';
+    }
+
+    var button =  document.getElementById('form1');
+const debounce = (func, delay) => {
+   
+    let debounceTimer
+    return function() {
+        const context = this
+        const args = arguments
+            clearTimeout(debounceTimer)
+                debounceTimer
+            = setTimeout(() => func.apply(context, args), delay)
+    }
+} 
+button.addEventListener('submit', debounce(function() {
+        alert("Hello\nNo matter how many times you" +
+            "click the debounce button, I get " +
+            "executed once every 2 seconds!!")
+                        }, 2000));
+</script>
+</html>
